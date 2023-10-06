@@ -7,5 +7,6 @@
 
 #include <stdio.h>
 #include "malloc.h"
+#include "string.h"
 
 #endif //JIANGNAN_851_MAIN_H
