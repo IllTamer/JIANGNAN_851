@@ -1,4 +1,4 @@
-#include "../main.h"
+#include "../../main.h"
 // 队列
 // 先进先出：一端插入，一端删除
 

@@ -1,4 +1,4 @@
-#include "../main.h"
+#include "../../main.h"
 // 双向链表
 typedef int datatype;
 typedef struct DoubList

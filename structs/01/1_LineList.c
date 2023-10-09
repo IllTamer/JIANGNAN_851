@@ -1,4 +1,4 @@
-#include "../main.h"
+#include "../../main.h"
 // 线性链表
 typedef int datatype;
 typedef struct List

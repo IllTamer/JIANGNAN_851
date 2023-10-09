@@ -1,4 +1,4 @@
-#include "../main.h"
+#include "../../main.h"
 // 顺序栈（先进先出）
 // 本质是数组
 typedef int datatype;
