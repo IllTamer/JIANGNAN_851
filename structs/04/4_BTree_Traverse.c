@@ -60,6 +60,24 @@ BTree* delete(CircQueue *queue) {
     --queue->num;
     return data;
 }
+// 用到的栈
+typedef struct {
+    BTree* data[100];
+    int top; // 顺序栈栈顶位置
+} SeqStack;
+SeqStack* init() {
+    SeqStack *SS;
+    SS = (SeqStack *) malloc(sizeof(SeqStack));
+    SS -> top = -1;
+    return SS;
+}
+void push(BTree* data, SeqStack* SS) {
+    SS->data[++SS->top]=data;
+}
+BTree* pop(SeqStack* SS) {
+    if (SS->top == -1) return NULL;
+    return SS->data[SS->top--];
+}
 
 // 二叉树
 //     4
@@ -86,6 +104,34 @@ void In(BTree *parent)
     In(parent->left);
     printf("%d ", parent->data);
     In(parent->right);
+}
+// 终须遍历非递归（栈）
+// 入栈根节点，优先访问左孩子，直至为空，再出栈访问右孩子
+void In_Stack(BTree *root)
+{
+    // 参数校验就不做了
+    SeqStack* stack = init();
+    BTree *parent = root;
+    // 栈不为空
+    // 加 parent != NULL 是为了让第一次循环启动
+    while (parent != NULL || stack->top != -1)
+    {
+        // 当前节点要么是根节点，要么是右孩子
+        while (parent != NULL)
+        {
+            push(parent, stack);
+            parent = parent->left;
+        }
+        // 栈里有左孩子
+        if (stack->top != -1)
+        {
+            parent = pop(stack);
+            printf("%d ", parent->data);
+            // 左孩子找完找右孩子
+            // 若没有，则下一次出栈弹出双亲，输出双亲，再找右孩子
+            parent = parent->right;
+        }
+    }
 }
 
 // 后序遍历（递归）
@@ -127,11 +173,13 @@ void Level(BTree *parent)
 int main() {
     int nodes[] = {4,2,6,1,3,5, 7};
     BTree *root = CreateTreeList(nodes, sizeof(nodes)/sizeof(nodes[0]));
-    Pre(root);
+//    Pre(root);
+//    printf("\n");
+//    In(root);
+//    printf("\n");
+    In_Stack(root);
     printf("\n");
-    In(root);
-    printf("\n");
-    Post(root);
-    printf("\n");
-    Level(root);
+//    Post(root);
+//    printf("\n");
+//    Level(root);
 }
