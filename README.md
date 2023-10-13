@@ -22,6 +22,8 @@
    - [循环队列](structs/02/2_SeqQueue.c)
    - [栈的应用举例](structs/02/2_Usage_Stack.c)
 3. 查找和内部排序
+   - [基础查找](structs/03/03_Search.c)
+   - [平衡二叉树](structs/03/03_BalancedTree.c)
 4. 树和图
    - [二叉树的存储结构](structs/04/4_BTree.c)
    - [二叉树的遍历](structs/04/4_BTree_Traverse.c)
@@ -45,6 +47,12 @@
 6. 文件的定义以及对文件进行的各种操作的库函数。
 
 ## 主要知识点
+
+> 此部分主要收录各章中出现的公式及零散重要的知识点，对应题型为简答题
+
+- [Hash冲突处理](kpoints/Hash.md)
+- [**B-树和B+树(22年真题)**](structs/03/03_B&BPlusTree.c)
+- 排序算法比较表(见书P48)
 
 ## 参考资料
 
