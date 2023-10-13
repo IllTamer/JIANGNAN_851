@@ -21,8 +21,31 @@ int* DirectSort(int nums[], int len) {
     return nums;
 }
 
-// 折半插入排序
-//
+// 折半插入排序（我更喜欢叫它双指针插入排序
+// 区别：在每次插入有序区前利用双指针取中值判断插入位置
+// https://www.cnblogs.com/haimishasha/p/10841044.html
+int* DirectBinarySort(int nums[], int len) {
+    if (len <= 1) return NULL;
+    for (int i = 1; i < len; ++ i) {
+        // i 是无序区起点，[low, high] 是有序区
+        int low = 0, high = i-1;
+        // break 是 low 处即为插入点索引
+        while (low < high) {
+            int middle = (low + high) / 2;
+            // 中间值 > 待插入值
+            if (nums[middle] > nums[i]) {
+                -- high;
+            } else ++ low;
+        }
+        // 将 [low, i-1] 后移，插入 i 即可
+        for (int j = i; j > low; -- j) {
+            int temp = nums[j];
+            nums[j] = nums[j-1];
+            nums[j-1] = temp;
+        }
+    }
+    return nums;
+}
 
 // 希尔排序 —— 缩小增量排序
 // 减小每次直接插入排序的步进值，直至为1
@@ -45,7 +68,8 @@ int main() {
     int nums[] = {9, 6, 7, 5, 8, 4, 1, 2, 3};
     int len = sizeof(nums) / sizeof(nums[0]);
 //    int *result = DirectSort(nums, len);
-    int *result = ShellSort(nums, len);
+    int *result = DirectBinarySort(nums, len);
+//    int *result = ShellSort(nums, len);
     for (int i = 0; i < len; ++ i) {
         printf("%d ", result[i]);
     }
