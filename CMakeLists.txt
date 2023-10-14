@@ -7,5 +7,6 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/outputs)
 
 add_executable(
         JIANGNAN_851 main.c main.h
+        algorithm
         structs
 )
