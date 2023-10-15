@@ -7,6 +7,8 @@
 1. C语言与Java、Go等高级语言不同，涉及到指针等变量的初始化时一定记得手动赋`NULL`防止脏数据，也防止老师随心情扣你分！
 2. 涉及到线性表的题，题中若无明确是否存在头节点（首部），则可自行决定。
 3. 算法题若无明确指定算法，则复杂度更低者优先。
+4. **算法部分涉及到的算法复杂度需全掌握！**
+5. 部分加粗索引代表重点内容（有些是学长们认为的重点，有些是本人认为的重点），有能力务必全掌握！
 
 ## 内容
 
@@ -46,13 +48,15 @@
    - [合(归)并排序](structs/03/03_Sort_Merge.c)
    - [快速排序](structs/03/03_Sort_Exchange.c#L25)
    - [最接近点问题(二维)](algorithm/01/01_ClosestPoint.cpp)
-   - 棋盘覆盖
-   - 递归生成全排列
-2. 贪心算法、分支限界法、动态规划
-   - 矩阵连乘
-   - **动态规划最优子结构证明**
-   - 最长公共子序列
-   - 找零问题
+   - [棋盘覆盖](algorithm/01/01_ChessboardOverlay.c)
+   - [递归生成全排列](algorithm/01/01_FullPerm.c)
+   - [其他应用举例](algorithm/01/01_Usage.c)
+2. **贪心算法、分支限界法、动态规划**
+   - [矩阵连乘(23真题)](algorithm/02/02_MatrixChain.c)
+   - [**动态规划最优子结构证明**](kpoints/Proof.md)
+   - [最长公共子序列(23真题)](algorithm/02/02_LongestCommonSubs.c)
+   - [**最大子段和**](algorithm/02/02_MaxSubsSum.c)
+   - [找零问题](algorithm/02/02_ChangeProblem.c)
    - 0-1 背包问题
    - 流线作业调度
    - 最优二叉搜索树
@@ -71,7 +75,7 @@
 > 此部分主要收录各章中出现的公式及零散重要的知识点，对应题型为简答题
 
 - [Hash冲突处理](kpoints/Hash.md)
-- [**B-树和B+树(22年真题)**](structs/03/03_B&BPlusTree.c)
+- [**B-树和B+树(22真题)**](structs/03/03_B&BPlusTree.c)
 - [排序算法比较表](kpoints/CompareSort.md)
 
 ## 参考资料
