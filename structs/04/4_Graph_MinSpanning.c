@@ -37,6 +37,7 @@ AdjMatrixGraph* create() {
 // Prim算法（最小边
 // https://www.cnblogs.com/skywang12345/p/3711506.html
 // TODO 算法实现，优先理解思想
+// O(n^2)
 void Prim(AdjMatrixGraph* graph);
 
 // Kruskal算法（最小边排序
@@ -46,6 +47,7 @@ void Prim(AdjMatrixGraph* graph);
  * 3. 当选取的边数为n-1时，终止（一颗节点数n的树共有n-1条边）
  * */
 // TODO 算法实现，优先理解思想
+// O(eloge) e为边数
 void Kruskal(AdjMatrixGraph* graph);
 
 // Dijkstra算法 - 找有权图中的所有的最短路
@@ -55,6 +57,7 @@ void Kruskal(AdjMatrixGraph* graph);
  * 2. 选择起点v，依次考察相邻顶点vi，若从v->vi路径短于dist[i]，更新记录，将顶点数据入队
  * 3. 出队节点（优先队列中dist最小者），重复操作2、3,直至队空
  * */
+// O(n^2)
 // 真题！！！
 void Dijkstra(AdjMatrixGraph *graph, int start)
 {
@@ -136,6 +139,6 @@ void Floyd(AdjMatrixGraph *graph) {
 
 int main() {
     AdjMatrixGraph *graph = create();
-//    Dijkstra(graph, 3);
-    Floyd(graph);
+    Dijkstra(graph, 3);
+//    Floyd(graph);
 }

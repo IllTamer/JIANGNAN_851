@@ -61,14 +61,16 @@
    - [找零问题](algorithm/02/02_ChangeProblem.c)
    - [0-1 背包问题](algorithm/02/02_01Package.c)
    - [流水作业调度](algorithm/02/02_FlowShop.cpp)
-   - 最优二叉搜索树
+   - [最优二叉搜索树](algorithm/02/02_OptimalBinarySearchTree.c)
    <hr>
 
-   - 最优装载
-   - Huffman编码()
-   - 单源最短路径
-   - 最小生成树()
-   - 多机调度问题
+   - [最优装载](algorithm/02/02_Loading.cpp)
+   - [Huffman编码(21真题)](algorithm/02/02_Huffman.c)
+   - [单源最短路径(23真题)](structs/04/4_Graph_MinSpanning.c#60L)
+   - 最小生成树
+     - [Prim(22真题)](structs/04/4_Graph_MinSpanning.c#41L)
+     - [Kruskal(23真题)](structs/04/4_Graph_MinSpanning.c#51L)
+   - [多机调度问题](algorithm/02/02_MachineSchedule.cpp)
    <hr>
 
    - 装载问题 - 子集树
