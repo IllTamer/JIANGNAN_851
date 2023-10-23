@@ -73,11 +73,11 @@
    - [多机调度问题](algorithm/02/02_MachineSchedule.cpp)
    <hr>
 
-   - 装载问题 - 子集树
-   - 批处理作业调度 - 排列树
-   - n后问题 - 排列树
-   - 01背包回溯法 - 子集树
-   - 圆排列问题 - 排列树
+   - [装载问题 - 子集树](algorithm/02/02_MaxLoading.c)
+   - [批处理作业调度 - 排列树](algorithm/02/02_BatchJobSchedule.c)
+   - [n后问题 - 排列树](algorithm/02/02_NQueen.c)
+   - [01背包回溯法 - 子集树](algorithm/02/02_01Package_Backtrace.c)
+   - [圆排列问题 - 排列树](algorithm/02/02_CircleArrangement.cpp)
    <hr>
 
    - 单源最短路径
